@@ -1,0 +1,30 @@
+<script>
+    // 스코프 : 망원경같은 역할을 함, 시야 범위를 제한함
+    // - 변수의 적용범위를 제한함
+
+    // var 함수 단위
+    // 함수가 종료되면 사라진다
+    
+    // let const 블록 단위 
+    // 블록이 종료되면 사라진다
+    // 블록 - if / for / while 등
+
+    if(true){
+        // var :  블록이 종료되어도 사라지지 않음
+        var num = 1;
+    }
+    // console.log(num);
+
+    if(true){
+        // let const : 블록이 종료되면 사라짐
+        let num1 = 1;
+    }
+    // console.log(num1);
+
+    for (var i = 0; i < 5; i++) {}
+    console.log(i);    
+
+    for (let i = 0; j < 5; j++) {}
+    console.log(j);
+
+</script>
