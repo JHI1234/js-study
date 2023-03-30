@@ -1,0 +1,73 @@
+<script>
+    // 1. (!중요) 전개 연산자(스프레드 연산자)
+    const cat1 = {
+        name : "냥냥이",
+        age : 2,
+        say() {
+            console.log("냥냥");
+        }
+    };
+
+    // age를 변경하고 싶을 경우
+        // 기존 고양이의 필드(프로퍼티) 값을 변경
+            cat1.age += 1;
+            //console.log(cat1.age);
+
+        // 새로운 고양이를 생성 후 age를 5로 지정하고 싶을 경우
+            const cat2 = {...cat1, age : 5};
+            // 위 코드는 아래 코드와 같다
+                /*
+                const cat2 = {
+                    name : "냥냥이",
+                    age : 2,
+                    say() {
+                        console.log("냥냥");
+                    },
+                    age : 5
+                }
+                */    
+            //console.log(cat2.age);
+
+            const cat3 = {
+                name : "나비",
+                hobby : "산책하기"
+            }    
+
+            const cat4 = {...cat1, ...cat3};
+            // 위 코드는 아래 코드와 같다
+                /*
+                const cat4 = {
+                    name : "냥냥이",
+                    age : 2,
+                    say() {
+                        console.log("냥냥");
+                    },
+                    name : "나비",
+                    hobby : "산책하기"
+                }
+                */
+            //console.log(cat4);
+
+        // 배열도 스프레드 가능
+            const companys = ["apple", "naver", "kakao"];
+
+            const companys1 = [...companys, "meta"];
+
+            //console.log(companys1);
+
+        //스프레드를 이용한 비구조화 할당
+            // 키 값을 지정할 수 있고, 키 값을 제외한 나머지 값들도 걸러낼 수 있음
+            const [item1, ...etcCompanys] = companys1;
+            //console.log(item1);        
+            //console.log(etcCompanys);        
+
+            const {name, ...noNameCat} = cat1;
+            //console.log(name);
+            //console.log(noNameCat);
+            
+
+
+    // 2. 비동기 객체 반복 for await (생략)
+        
+    // 3. Promise에 finally 메서드 (생략) 
+</script>
