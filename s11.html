@@ -171,21 +171,60 @@
 
         // console.log(arr.filter(value => value == "e"));
 
-        const predicate = (value) => {
-            return value != "d";
-        }
+        // const predicate = (value) => {
+        //     return value != "d";
+        // }
 
-        console.log(arr.filter(predicate));
+        //console.log(arr.filter(predicate));
 
 
         // map() : 객체 Map과 array 메서드 map은 전혀 관련 없음
         // 기존 데이터를 변경하거나 타입을 바꿔서 배열을 만들 때 사용
 
-        const result = arr.map(e => arr.indexOf(e));
-        console.log(result);
+        // const result = arr.map(e => arr.indexOf(e));
+        // console.log(result);
 
+    //객체
 
+    const obj = {
+        key1 : "value1",
+        key2(){
+            this.key1;   
+        },
+        key3 : {
+            subKey1 : "subValue1"
+        }
+    };
 
+    obj.key2();
+    //obj?.key3?.subKey1;
 
+    // Date
+
+    //console.log(`Date.now() : ${Date.now()} `);
+
+    const myDate = new Date();
+    const tempDate = new Date('2023-01-01t12:00:00.000z');
+    // console.log(myDate);
+    //console.log(tempDate);
+
+    // console.log(`myDate.getFullYear() : ${myDate.getFullYear()}`);  // 년도
+    // console.log(`myDate.getMonth() : ${myDate.getMonth()+1}`);      // 월
+    // console.log(`myDate.getDate() : ${myDate.getDate()}`);          // 날짜
+    // console.log(`myDate.getDay() : ${myDate.getDay()}`);            // 요일
+
+    // console.log(`myDate.toJSON() : ${myDate.toJSON()}`);            // GMT 시간 반환
+
+    // navigator
+    // document.getElementById(""); 
+    // window.document.getElementById(""); 
+
+    // location.href ="";
+    // window.location.href ="";
+    
+    const a = 1;
+    b = 1;      // window라는 최상단 객체 안에 변수로서 집어넣은 객체, window.b = 1; 와 같음
+    console.log(window.a);  // 
+    console.log(window.b);  // 해당 페이지가 유지되는 동안 window.b로 선언된 변수는 유지됨
 
 </script>
